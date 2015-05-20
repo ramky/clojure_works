@@ -9,4 +9,7 @@
   :ring {:handler rest-demo.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring-mock "0.1.5"]]}})
+                        [ring-mock "0.1.5"]]}}
+  :repl-options {
+    :prompt (fn [ns] (str "\u001B[35m[\u001B[34m" ns "\u001B[35m]\u001B[33m =>\u001B[m " ))
+    :welcome (println "Its REPL time!")})
